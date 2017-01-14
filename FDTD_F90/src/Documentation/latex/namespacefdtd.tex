@@ -1,0 +1,143 @@
+\hypertarget{namespacefdtd}{}\section{fdtd Module Reference}
+\label{namespacefdtd}\index{fdtd@{fdtd}}
+
+
+Main F\+D\+T\+D Update Equations.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacefdtd_a156f4a20b071ad56da4bcc5d270dd747}{updateh} ()
+\begin{DoxyCompactList}\small\item\em H-\/field F\+D\+T\+D Update Loops. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacefdtd_ac0b6814227307ba8b15da323145166ec}{updatee} ()
+\begin{DoxyCompactList}\small\item\em Ez F\+D\+T\+D Update Loop. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacefdtd_a4fe617dcabb91faeed9b43b8c9207d88}{tfsf\+\_\+hupdate} ()
+\begin{DoxyCompactList}\small\item\em Hx, Hy T\+F/\+S\+F Updates. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacefdtd_ac3f5a586d4520cb64eac0709956fdb5b}{tfsf\+\_\+eupdate} ()
+\begin{DoxyCompactList}\small\item\em Ez T\+F/\+S\+F Updates. \end{DoxyCompactList}\item 
+real(\hyperlink{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}{dp}) function \hyperlink{namespacefdtd_aeef08d72062ed5c9275b60deee29e46c}{source} (n)
+\begin{DoxyCompactList}\small\item\em Source function for F\+D\+T\+D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter, private \hyperlink{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}{dp} = K\+I\+N\+D(1.d0)
+\begin{DoxyCompactList}\small\item\em Electric and Magnetic Fields. \end{DoxyCompactList}\item 
+\hypertarget{namespacefdtd_a8f09e757268d6a1265417c68ce5a8abe}{}real(\hyperlink{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}{dp}), dimension(0\+:sizex-\/1, 0\+:sizey-\/1) {\bfseries ez} = 0.d0\label{namespacefdtd_a8f09e757268d6a1265417c68ce5a8abe}
+
+\item 
+\hypertarget{namespacefdtd_ae8000ff5f8c222fc92634a2f0d921fb0}{}real(\hyperlink{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}{dp}), dimension(0\+:sizex-\/2, 0\+:sizey-\/1) {\bfseries hy} = 0.d0\label{namespacefdtd_ae8000ff5f8c222fc92634a2f0d921fb0}
+
+\item 
+\hypertarget{namespacefdtd_a9234b92ecf18bff73a85c48a61424a7b}{}real(\hyperlink{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}{dp}), dimension(0\+:sizex-\/1, 0\+:sizey-\/2) {\bfseries hx} = 0.d0\label{namespacefdtd_a9234b92ecf18bff73a85c48a61424a7b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main F\+D\+T\+D Update Equations. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacefdtd_aeef08d72062ed5c9275b60deee29e46c}{}\index{fdtd@{fdtd}!source@{source}}
+\index{source@{source}!fdtd@{fdtd}}
+\subsubsection[{source}]{\setlength{\rightskip}{0pt plus 5cm}real({\bf dp}) function fdtd\+::source (
+\begin{DoxyParamCaption}
+\item[{integer, intent(in)}]{n}
+\end{DoxyParamCaption}
+)}\label{namespacefdtd_aeef08d72062ed5c9275b60deee29e46c}
+
+
+Source function for F\+D\+T\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacefdtd_ac3f5a586d4520cb64eac0709956fdb5b}{}\index{fdtd@{fdtd}!tfsf\+\_\+eupdate@{tfsf\+\_\+eupdate}}
+\index{tfsf\+\_\+eupdate@{tfsf\+\_\+eupdate}!fdtd@{fdtd}}
+\subsubsection[{tfsf\+\_\+eupdate}]{\setlength{\rightskip}{0pt plus 5cm}subroutine fdtd\+::tfsf\+\_\+eupdate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacefdtd_ac3f5a586d4520cb64eac0709956fdb5b}
+
+
+Ez T\+F/\+S\+F Updates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ez} & \\
+\hline
+{\em Hx\+Inc} & \\
+\hline
+{\em Hy\+Inc} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacefdtd_a4fe617dcabb91faeed9b43b8c9207d88}{}\index{fdtd@{fdtd}!tfsf\+\_\+hupdate@{tfsf\+\_\+hupdate}}
+\index{tfsf\+\_\+hupdate@{tfsf\+\_\+hupdate}!fdtd@{fdtd}}
+\subsubsection[{tfsf\+\_\+hupdate}]{\setlength{\rightskip}{0pt plus 5cm}subroutine fdtd\+::tfsf\+\_\+hupdate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacefdtd_a4fe617dcabb91faeed9b43b8c9207d88}
+
+
+Hx, Hy T\+F/\+S\+F Updates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hx} & \\
+\hline
+{\em Hy} & \\
+\hline
+{\em Ez\+Inc} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacefdtd_ac0b6814227307ba8b15da323145166ec}{}\index{fdtd@{fdtd}!updatee@{updatee}}
+\index{updatee@{updatee}!fdtd@{fdtd}}
+\subsubsection[{updatee}]{\setlength{\rightskip}{0pt plus 5cm}subroutine fdtd\+::updatee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacefdtd_ac0b6814227307ba8b15da323145166ec}
+
+
+Ez F\+D\+T\+D Update Loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ez} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacefdtd_a156f4a20b071ad56da4bcc5d270dd747}{}\index{fdtd@{fdtd}!updateh@{updateh}}
+\index{updateh@{updateh}!fdtd@{fdtd}}
+\subsubsection[{updateh}]{\setlength{\rightskip}{0pt plus 5cm}subroutine fdtd\+::updateh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacefdtd_a156f4a20b071ad56da4bcc5d270dd747}
+
+
+H-\/field F\+D\+T\+D Update Loops. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hx} & field \\
+\hline
+{\em Hy} & field \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}{}\index{fdtd@{fdtd}!dp@{dp}}
+\index{dp@{dp}!fdtd@{fdtd}}
+\subsubsection[{dp}]{\setlength{\rightskip}{0pt plus 5cm}integer, parameter, private fdtd\+::dp = K\+I\+N\+D(1.d0)}\label{namespacefdtd_a39bc3cb7950c872f4c987e6f6e1bb68a}
+
+
+Electric and Magnetic Fields. 
+
+Because of the staggering of the Yee grid, the fields are offset from each other. Therefore, Hx(m,n+1/2), Hy(m+1/2,n), and Ez(m,n) share the same index, \mbox{[}m, n\mbox{]}. 

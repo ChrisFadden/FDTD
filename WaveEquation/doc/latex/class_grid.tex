@@ -1,0 +1,164 @@
+\section{Grid Class Reference}
+\label{class_grid}\index{Grid@{Grid}}
+Inheritance diagram for Grid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Grid} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the \doxyref{Grid}{p.}{class_grid} class. \end{DoxyCompactList}\item 
+int {\bf get\+Max\+Time} ()
+\begin{DoxyCompactList}\small\item\em returns the maximum time of simulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Source} \{ {\bfseries H\+A\+R\+M\+O\+N\+I\+C}, 
+{\bfseries G\+A\+U\+S\+S\+I\+A\+N}
+ \}\label{class_grid_abbf91d99a10389a676b2ae4683c41f3d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf Harmonic\+Source} (int)
+\begin{DoxyCompactList}\small\item\em Returns value of the harmonic source. \end{DoxyCompactList}\item 
+double {\bf Gaussian\+Source} (int)
+\begin{DoxyCompactList}\small\item\em Returns value of the gaussian source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries Size\+X}\label{class_grid_a0624ee310d63ed75758ba1be4640ce9d}
+
+\item 
+int {\bfseries Size\+Y}\label{class_grid_adbc706daa9218d1ee9e37feee6a62fbd}
+
+\item 
+int {\bfseries t} = 0\label{class_grid_a2dd507d805da86cfdc51034c5c098b7d}
+
+\item 
+int {\bfseries Max\+Time}\label{class_grid_ab5143fda0e0c599b2ac46b4588d77c98}
+
+\item 
+int {\bf isrc}
+\item 
+int {\bf jsrc}
+\item 
+const int {\bfseries cc} = 299792458\label{class_grid_a7e3bb460744596f2df7ea838be8483f6}
+
+\item 
+const double {\bfseries mu0} = 16 $\ast$ atan(1) $\ast$ 1.\+0e-\/7\label{class_grid_a5de990921f607452dd11372e4881d959}
+
+\item 
+const double {\bfseries eps0} = 1.\+0 / (cc $\ast$ cc $\ast$ mu0)\label{class_grid_acb75b851ea554b4f279e232b94fdff6c}
+
+\item 
+double {\bfseries dx}\label{class_grid_a1f52441a37442b054bf153cc362cf2d8}
+
+\item 
+double {\bfseries dy}\label{class_grid_ac388777840b30765f83a8a135d7b0cec}
+
+\item 
+double {\bfseries dt}\label{class_grid_a8aa332bcbd08178a499c6208e6cba073}
+
+\item 
+Source {\bfseries src}\label{class_grid_af4f38a38e63bc28d44b8968a3ecff1b7}
+
+\item 
+double {\bfseries freq}\label{class_grid_a273377dfb22fdfb33543bd467c7cdb76}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries epsr}\label{class_grid_ae026e1830e2fc67be14a5c6ce6bba5dd}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries mur}\label{class_grid_acdbfd6bf3f1abbbb988662f2fe986bed}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Grid@{Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!Grid@{Grid}}
+\subsubsection[{Grid}]{\setlength{\rightskip}{0pt plus 5cm}Grid\+::\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_grid_a4ac9ff4f63552b4c61ff90fcb35ad66c}
+
+
+Constructor of the \doxyref{Grid}{p.}{class_grid} class. 
+
+The grid is initialized using values taken from the file created by the Java G\+U\+I. Please take note of the main python script used to run this, and keep in mind the filename is hardcoded at this time. 
+
+\subsection{Member Function Documentation}
+\index{Grid@{Grid}!Gaussian\+Source@{Gaussian\+Source}}
+\index{Gaussian\+Source@{Gaussian\+Source}!Grid@{Grid}}
+\subsubsection[{Gaussian\+Source}]{\setlength{\rightskip}{0pt plus 5cm}double Grid\+::\+Gaussian\+Source (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_grid_a6c07db06db902d014a2fd6620186dbc3}
+
+
+Returns value of the gaussian source. 
+
+This evaluates a gaussian source, an exponential raised to the \$x$^\wedge$2\$. This has the benefit in a time domain simulation of having multiple frequency components, and therefore can give a more broadband response for the simulation
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & the time at which to evaluate the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value at the specified time 
+\end{DoxyReturn}
+\index{Grid@{Grid}!get\+Max\+Time@{get\+Max\+Time}}
+\index{get\+Max\+Time@{get\+Max\+Time}!Grid@{Grid}}
+\subsubsection[{get\+Max\+Time}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::get\+Max\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_grid_ade2d3195c5ca78f5944011767879aef4}
+
+
+returns the maximum time of simulation 
+
+This ensures protection of the \doxyref{Grid}{p.}{class_grid} class variables, and acts as a get function for the main program \index{Grid@{Grid}!Harmonic\+Source@{Harmonic\+Source}}
+\index{Harmonic\+Source@{Harmonic\+Source}!Grid@{Grid}}
+\subsubsection[{Harmonic\+Source}]{\setlength{\rightskip}{0pt plus 5cm}double Grid\+::\+Harmonic\+Source (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_grid_aa676b212b88dc05a81fa8b2824c39ffd}
+
+
+Returns value of the harmonic source. 
+
+This evaluates a harmonic source, a sine wave, at the specified time, and returns that value. This has a single frequency content, and is mostly used for testing purposes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & the time at which to evaluate the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value at the specified time 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Grid@{Grid}!isrc@{isrc}}
+\index{isrc@{isrc}!Grid@{Grid}}
+\subsubsection[{isrc}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::isrc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_grid_afea0374c458d210f2f587dadf7ce50cd}
+x-\/coordinate of the source on the grid \index{Grid@{Grid}!jsrc@{jsrc}}
+\index{jsrc@{jsrc}!Grid@{Grid}}
+\subsubsection[{jsrc}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::jsrc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_grid_a3ff660de7dea4644d36b0a1dac08c24c}
+y-\/coordinate of the source on the grid 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/cfadden3/\+Git\+Hub/\+Wave\+Equation/include/{\bf Grid.\+h}\item 
+/home/cfadden3/\+Git\+Hub/\+Wave\+Equation/src/Grid.\+cpp\end{DoxyCompactItemize}

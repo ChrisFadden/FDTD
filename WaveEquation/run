@@ -1,0 +1,14 @@
+#! /bin/bash
+set -e
+make
+java -cp ./gui/ GuiMain
+./WaveEquation
+
+matlab -nosplash -nodesktop -r "run Plot"
+
+cvlc WaveMovie.avi
+
+clear
+rm grid.txt
+rm WaveEquation
+rm WaveMovie.avi

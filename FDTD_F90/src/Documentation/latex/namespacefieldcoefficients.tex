@@ -1,0 +1,50 @@
+\hypertarget{namespacefieldcoefficients}{}\section{fieldcoefficients Module Reference}
+\label{namespacefieldcoefficients}\index{fieldcoefficients@{fieldcoefficients}}
+
+
+F\+D\+T\+D Coefficients.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter, private \hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp} = K\+I\+N\+D(1.d0)
+\begin{DoxyCompactList}\small\item\em A collection of coefficients used in the F\+D\+T\+D update equations. \end{DoxyCompactList}\item 
+\hypertarget{namespacefieldcoefficients_acc26d812ef952624a51e2f66819a7ff1}{}real(\hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp}), dimension(0\+:sizex-\/1, 0\+:sizey-\/1) {\bfseries ceze} = 1.d0\label{namespacefieldcoefficients_acc26d812ef952624a51e2f66819a7ff1}
+
+\item 
+\hypertarget{namespacefieldcoefficients_a81f7a4f6532e267554af2e037602cf80}{}real(\hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp}), dimension(0\+:sizex-\/1, 0\+:sizey-\/1) {\bfseries cezh} = dt / (eps0 $\ast$ dx)\label{namespacefieldcoefficients_a81f7a4f6532e267554af2e037602cf80}
+
+\item 
+\hypertarget{namespacefieldcoefficients_ad167e3322c1ce09a253b55af2fc65559}{}real(\hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp}), dimension(0\+:sizex-\/1, 0\+:sizey-\/2) {\bfseries chxh} = 1.d0\label{namespacefieldcoefficients_ad167e3322c1ce09a253b55af2fc65559}
+
+\item 
+\hypertarget{namespacefieldcoefficients_a4473210db3aecc4637aaf126668599af}{}real(\hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp}), dimension(0\+:sizex-\/1, 0\+:sizey-\/2) {\bfseries chxe} = dt / (mu0 $\ast$ dx)\label{namespacefieldcoefficients_a4473210db3aecc4637aaf126668599af}
+
+\item 
+\hypertarget{namespacefieldcoefficients_a3704cd3a2f9bd8205c6e3550d96038c0}{}real(\hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp}), dimension(0\+:sizex-\/2, 0\+:sizey-\/1) {\bfseries chyh} = 1.d0\label{namespacefieldcoefficients_a3704cd3a2f9bd8205c6e3550d96038c0}
+
+\item 
+\hypertarget{namespacefieldcoefficients_aa5b53e7a9497d541b0afc297a0ae83b2}{}real(\hyperlink{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{dp}), dimension(0\+:sizex-\/2, 0\+:sizey-\/1) {\bfseries chye} = dt / (mu0 $\ast$ dx)\label{namespacefieldcoefficients_aa5b53e7a9497d541b0afc297a0ae83b2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+D\+T\+D Coefficients. 
+
+\subsection{Variable Documentation}
+\hypertarget{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}{}\index{fieldcoefficients@{fieldcoefficients}!dp@{dp}}
+\index{dp@{dp}!fieldcoefficients@{fieldcoefficients}}
+\subsubsection[{dp}]{\setlength{\rightskip}{0pt plus 5cm}integer, parameter, private fieldcoefficients\+::dp = K\+I\+N\+D(1.d0)}\label{namespacefieldcoefficients_a78dd03a7796957c315376825498c96e6}
+
+
+A collection of coefficients used in the F\+D\+T\+D update equations. 
+
+Ceze = Ez\+: coefficient of previous Ez ~\newline
+ Cezh = Ez\+: coefficient of curl(\+H) ~\newline
+ Chxh = Hx\+: coefficient of previous Hx ~\newline
+ Chxe = Hx\+: coefficient of curl(\+E) ~\newline
+ Chyh = Hy\+: coefficient of previous Hy ~\newline
+ Chye = Hy\+: coefficient of curl(\+E) ~\newline
+ 

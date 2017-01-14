@@ -1,0 +1,44 @@
+#!/bin/bash
+
+fileName=build/parameters.txt
+
+freq=1 #GHz
+sizeX=40 
+sizeY=$sizeX
+sizeZ=$sizeX
+maxTime=50
+
+src="Harmonic"
+
+i_src=20  #location of
+j_src=20  #point source
+k_src=20 
+
+tfsf_x0=0 #boundaries of
+tfsf_y0=0 #rectangular
+tfsf_z0=0
+tfsf_x1=30 #total field
+tfsf_y1=30 #scatter field region
+tfsf_z1=30
+theta=90
+phi=0
+psi=90
+
+echo $freq >> $fileName
+echo $sizeX >> $fileName
+echo $sizeY >> $fileName
+echo $sizeZ >> $fileName
+echo $maxTime >> $fileName
+echo $src >> $fileName
+echo $i_src >> $fileName
+echo $j_src >> $fileName
+echo $k_src >> $fileName
+echo $tfsf_x0 >> $fileName
+echo $tfsf_y0 >> $fileName
+echo $tfsf_z0 >> $fileName
+echo $tfsf_x1 >> $fileName
+echo $tfsf_y1 >> $fileName
+echo $tfsf_z1 >> $fileName
+echo $theta >> $fileName
+echo $phi >> $fileName
+echo $psi >> $fileName

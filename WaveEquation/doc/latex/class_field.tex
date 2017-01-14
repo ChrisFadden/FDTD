@@ -1,0 +1,111 @@
+\section{Field Class Reference}
+\label{class_field}\index{Field@{Field}}
+Inheritance diagram for Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Field} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the \doxyref{Field}{p.}{class_field} class. \end{DoxyCompactList}\item 
+void {\bf Update} (int)
+\begin{DoxyCompactList}\small\item\em Updates the field value. \end{DoxyCompactList}\item 
+double {\bf Source} (int)
+\begin{DoxyCompactList}\small\item\em Returns the source function value. \end{DoxyCompactList}\item 
+void {\bf Print} ()
+\begin{DoxyCompactList}\small\item\em Outputs the field values. \end{DoxyCompactList}\item 
+double {\bfseries Dim2} (int, int)\label{class_field_a38a060a3037f15811edd713451f5b5f7}
+
+\item 
+double \& {\bfseries Az\+Old} (int, int)\label{class_field_aae833bb003bd88826447a6a99e6f1e8e}
+
+\item 
+double \& {\bfseries Az\+New} (int, int)\label{class_field_ab7e9bc608b5ef944e00e64ac87e9476a}
+
+\item 
+double \& {\bfseries Az} (int, int)\label{class_field_ad06425d1d3a675a040d47ff5daeec316}
+
+\item 
+double \& {\bfseries Ca} (int, int)\label{class_field_a4aa353e182867290e3e4b80c49e79497}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Field@{Field}!Field@{Field}}
+\index{Field@{Field}!Field@{Field}}
+\subsubsection[{Field}]{\setlength{\rightskip}{0pt plus 5cm}Field\+::\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_field_a3e804c92273d9159f413f227b535c672}
+
+
+Constructor of the \doxyref{Field}{p.}{class_field} class. 
+
+The field is initialized with values from the inheritance of the \doxyref{Grid}{p.}{class_grid}. Its values therefore depend on the default constructor of the \doxyref{Grid}{p.}{class_grid}. 
+
+\subsection{Member Function Documentation}
+\index{Field@{Field}!Print@{Print}}
+\index{Print@{Print}!Field@{Field}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void Field\+::\+Print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_field_a318ede8c868e024ed2ede4c0bc6e5058}
+
+
+Outputs the field values. 
+
+This function prints the values of the field at all points to a csv file, so the results can be seen graphically. \index{Field@{Field}!Source@{Source}}
+\index{Source@{Source}!Field@{Field}}
+\subsubsection[{Source}]{\setlength{\rightskip}{0pt plus 5cm}double Field\+::\+Source (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}\label{class_field_a2d3017d92f34b4e4a9e1474bb231da64}
+
+
+Returns the source function value. 
+
+This returns the value of the source, either gaussian or sine, and uses that to input power into the grid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & the current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the source 
+\end{DoxyReturn}
+\index{Field@{Field}!Update@{Update}}
+\index{Update@{Update}!Field@{Field}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Field\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}\label{class_field_a7159f10e4abd87a193ef5a17da01a5ef}
+
+
+Updates the field value. 
+
+This function is in the time loop, and updates the field value using finite differences.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the current number of iterations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The field value is updated 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/cfadden3/\+Git\+Hub/\+Wave\+Equation/include/{\bf Field.\+h}\item 
+/home/cfadden3/\+Git\+Hub/\+Wave\+Equation/src/Field.\+cpp\end{DoxyCompactItemize}

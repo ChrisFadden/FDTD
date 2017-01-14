@@ -1,2 +1,2 @@
 # FDTD
-Collection of Finite Difference Time Domain Codes
+  Various Finite Difference Time Domain Implementations

@@ -1,0 +1,106 @@
+\hypertarget{namespacefdtd__constants}{}\section{fdtd\+\_\+constants Module Reference}
+\label{namespacefdtd__constants}\index{fdtd\+\_\+constants@{fdtd\+\_\+constants}}
+
+
+Contains various constants for an F\+D\+T\+D simulation, including sizes of various domains, and electric/magnetic constants.~\newline
+.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacefdtd__constants_ae6226badfcd8ad589f23da9c7738698d}{}integer, parameter, private {\bfseries dp} = K\+I\+N\+D(1.d0)\label{namespacefdtd__constants_ae6226badfcd8ad589f23da9c7738698d}
+
+\item 
+\hypertarget{namespacefdtd__constants_afea44d02f5a576739aec3ae6a6f88309}{}real(dp), parameter {\bfseries pi} = 4.\+0d0 $\ast$ D\+A\+T\+A\+N(1.\+0d0)\label{namespacefdtd__constants_afea44d02f5a576739aec3ae6a6f88309}
+
+\item 
+\hypertarget{namespacefdtd__constants_af9e6f822e2d64af12863c3c8aed3500d}{}real(dp), parameter {\bfseries cc} = 299792458.d0\label{namespacefdtd__constants_af9e6f822e2d64af12863c3c8aed3500d}
+
+\item 
+\hypertarget{namespacefdtd__constants_a2f7a20b7c1b87a2b0e5b792091b65003}{}real(dp), parameter {\bfseries mu0} = 4.\+0d0 $\ast$ pi $\ast$ 10.\+0d0$\ast$$\ast$(-\/7.\+0d0)\label{namespacefdtd__constants_a2f7a20b7c1b87a2b0e5b792091b65003}
+
+\item 
+\hypertarget{namespacefdtd__constants_ac9c6b1ee3e2b047a115aeff548ce14da}{}real(dp), parameter {\bfseries eps0} = 1.\+0d0 / (cc $\ast$ cc $\ast$ mu0)\label{namespacefdtd__constants_ac9c6b1ee3e2b047a115aeff548ce14da}
+
+\item 
+\hypertarget{namespacefdtd__constants_af5f07e0107c8e9c8625adc9a291ca44b}{}real(dp), parameter {\bfseries freq} = 10.d0$\ast$$\ast$9.d0\label{namespacefdtd__constants_af5f07e0107c8e9c8625adc9a291ca44b}
+
+\item 
+\hypertarget{namespacefdtd__constants_a779a79a9c5a05cf3147306603051e596}{}real(dp), parameter {\bfseries nlambda} = 50\label{namespacefdtd__constants_a779a79a9c5a05cf3147306603051e596}
+
+\item 
+\hypertarget{namespacefdtd__constants_ac6056f1e3aadc3a3813a2b443270549d}{}real(dp), parameter {\bfseries dx} = (cc / freq) / Nlambda\label{namespacefdtd__constants_ac6056f1e3aadc3a3813a2b443270549d}
+
+\item 
+\hypertarget{namespacefdtd__constants_a079744a2a5481f29701d99600d3f0cbb}{}real(dp), parameter {\bfseries dy} = dx\label{namespacefdtd__constants_a079744a2a5481f29701d99600d3f0cbb}
+
+\item 
+\hypertarget{namespacefdtd__constants_af0cfa5aea2a346926b5d14929a4f9d0c}{}real(dp), parameter {\bfseries dt} = dx $\ast$ 0.\+99d0 / (\+D\+S\+Q\+R\+T(2.\+0d0) $\ast$ cc)\label{namespacefdtd__constants_af0cfa5aea2a346926b5d14929a4f9d0c}
+
+\item 
+\hypertarget{namespacefdtd__constants_a017e6aaca6c400a1ee5616177f9dadf8}{}integer, parameter {\bfseries totaltime} = 1000\label{namespacefdtd__constants_a017e6aaca6c400a1ee5616177f9dadf8}
+
+\item 
+\hypertarget{namespacefdtd__constants_a5e2b96d424051ed4a5cadf6a8b51dc34}{}integer, parameter {\bfseries tfsf\+\_\+size} = 5 $\ast$ Nlambda\label{namespacefdtd__constants_a5e2b96d424051ed4a5cadf6a8b51dc34}
+
+\item 
+\hypertarget{namespacefdtd__constants_a69fc59482c127beee9ec8f3421f7164c}{}integer, parameter {\bfseries pml\+\_\+size} = 0\label{namespacefdtd__constants_a69fc59482c127beee9ec8f3421f7164c}
+
+\item 
+\hypertarget{namespacefdtd__constants_a744843abc91bea13f4021929ff7e0821}{}integer, parameter {\bfseries sizex} = 0.\+5 $\ast$ Nlambda + T\+F\+S\+F\+\_\+\+Size\label{namespacefdtd__constants_a744843abc91bea13f4021929ff7e0821}
+
+\item 
+\hypertarget{namespacefdtd__constants_a2e0af201d0abefaeac3169c9602bd609}{}integer, parameter {\bfseries sizey} = Size\+X\label{namespacefdtd__constants_a2e0af201d0abefaeac3169c9602bd609}
+
+\item 
+\hypertarget{namespacefdtd__constants_af1ba0830799634b4d3879bca118333ae}{}integer, parameter {\bfseries tfsf\+\_\+x0} = Nlambda / 4\label{namespacefdtd__constants_af1ba0830799634b4d3879bca118333ae}
+
+\item 
+\hypertarget{namespacefdtd__constants_a9bff17498ce852a251e4c2b2d4faf4a4}{}integer, parameter {\bfseries tfsf\+\_\+x1} = T\+F\+S\+F\+\_\+x0 + T\+F\+S\+F\+\_\+\+Size\label{namespacefdtd__constants_a9bff17498ce852a251e4c2b2d4faf4a4}
+
+\item 
+\hypertarget{namespacefdtd__constants_aa104fc25c9593c29911cfe82ca7a36f8}{}integer, parameter {\bfseries tfsf\+\_\+y0} = T\+F\+S\+F\+\_\+x0\label{namespacefdtd__constants_aa104fc25c9593c29911cfe82ca7a36f8}
+
+\item 
+\hypertarget{namespacefdtd__constants_aa02a6eb2ec76b80ead7e69f264a1b79e}{}integer, parameter {\bfseries tfsf\+\_\+y1} = T\+F\+S\+F\+\_\+x1\label{namespacefdtd__constants_aa02a6eb2ec76b80ead7e69f264a1b79e}
+
+\item 
+\hypertarget{namespacefdtd__constants_a29af66cb7d8465a75e35b1e890eaa01d}{}real(dp), parameter {\bfseries phi} = pi / 60.d0\label{namespacefdtd__constants_a29af66cb7d8465a75e35b1e890eaa01d}
+
+\item 
+\hypertarget{namespacefdtd__constants_a9abf36b2db0c61092ca81af8939f05fb}{}real(dp), parameter {\bfseries cosphi} = D\+C\+O\+S(phi)\label{namespacefdtd__constants_a9abf36b2db0c61092ca81af8939f05fb}
+
+\item 
+\hypertarget{namespacefdtd__constants_a44b6aca1f5c2cf716b3474c29a35b9d9}{}real(dp), parameter {\bfseries sinphi} = D\+S\+I\+N(phi)\label{namespacefdtd__constants_a44b6aca1f5c2cf716b3474c29a35b9d9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains various constants for an F\+D\+T\+D simulation, including sizes of various domains, and electric/magnetic constants.~\newline
+. 
+
+dp = F\+O\+R\+T\+R\+A\+N constant for double precision floating point on any O\+S ~\newline
+ pi = Standard constant (3.\+14159...) ~\newline
+ cc = The speed of light in m/s ~\newline
+ mu0 = magnetic permeability in a vacuum ~\newline
+ eps0 = electric permittivity in a vacuum ~\newline
+ freq = The highest frequency for the simulation. Used for Fourier Transform when calculating power. ~\newline
+ Nlambda = Number of points per wavelength ~\newline
+ dx = The spatial step in the x direction ~\newline
+ dy = The spatial step in the y direction ~\newline
+ dt = The time step increment~\newline
+ Total\+Time = The total number of time steps in the simulation ~\newline
+ T\+F\+S\+F\+\_\+\+Size = The size of the Total Field region, in cells, which must encompass the scatterer ~\newline
+ P\+M\+L\+\_\+\+Size = The size, in cells, of the Perfectly Matched Layer, to prevent reflections from boundaries. ~\newline
+ Size\+X = The size in cells, in the x direction, of the total simulation ~\newline
+ Size\+Y = The size in cells, in the y direction, of the total simualtion ~\newline
+ T\+F\+S\+F\+\_\+x0 = The first cell of the Total Field region in the x direction ~\newline
+ T\+F\+S\+F\+\_\+x1 = The last cell of the Total Field region in the x direction ~\newline
+ T\+F\+S\+F\+\_\+y0 = The first cell of the Total Field region in the y direction ~\newline
+ T\+F\+S\+F\+\_\+y1 = The last cell fo the Total Field region in the y direction ~\newline
+ phi = The direction of the plane wave incident on the total field box ~\newline
+ cosphi = The cosine of phi~\newline
+ sinphi = The sine of phi~\newline
+ 

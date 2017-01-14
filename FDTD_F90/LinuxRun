@@ -1,0 +1,21 @@
+#! /bin/bash
+set -e
+make -C ./build/
+clear
+
+echo -e "\e[92mMake Successful\e[39m"
+
+java -cp ./gui/ GuiMain
+
+echo -e "\e[92mGUI Sucessful\e[39m"
+
+./build/FDTD
+
+echo -e "\e[92mSimulation Finished\e[39m"
+
+matlab -nosplash -nodesktop -r "run Plot"
+
+cvlc FDTD_Movie.avi
+
+rm grid.txt
+rm FDTD_Movie.avi

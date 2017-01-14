@@ -1,0 +1,21 @@
+#! /bin/bash
+cd src
+touch *
+cd ..
+cd build
+make
+cd ..
+
+echo -e "\e[92mMake Successful \e[39m"
+
+if [ "$#" != "1" ]; then
+  export numProc="1"
+else
+  export numProc="$1"
+fi
+
+echo -e "About to run with \e[93m$numProc\e[39m MPI processes"
+mpirun -np $numProc ./build/PSTD 
+echo -e "\e[92mCompleted Simulation \e[39m"
+
+gnuplot -p Plot.p

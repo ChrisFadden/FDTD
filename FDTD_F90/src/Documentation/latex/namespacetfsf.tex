@@ -1,0 +1,116 @@
+\hypertarget{namespacetfsf}{}\section{tfsf Module Reference}
+\label{namespacetfsf}\index{tfsf@{tfsf}}
+
+
+Total Field/\+Scattered Field Implementation.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacetfsf_aa2ef130db3d1a7206055623c28c5a2e3}{tfsf\+\_\+inc} ()
+\begin{DoxyCompactList}\small\item\em 1\+D T\+F/\+S\+F Update Loops \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacetfsf_a96006e1e78b93b364ccfafa419921489}{tfsf\+\_\+updatehinc} ()
+\begin{DoxyCompactList}\small\item\em Get Hx\+Inc and Hy\+Inc from Hinc0. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacetfsf_a03610cc04c70776bc1f6292523af664c}{tfsf\+\_\+updateeinc} ()
+\begin{DoxyCompactList}\small\item\em Update Ez\+Inc from Einc0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter, private \hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp} = K\+I\+N\+D(1.d0)
+\begin{DoxyCompactList}\small\item\em Incidenet Fields. \end{DoxyCompactList}\item 
+\hypertarget{namespacetfsf_a9788c6209c44165cfbb67a6460a84e3c}{}real(\hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp}), dimension(-\/10\+:sizex-\/1) {\bfseries einc0}\label{namespacetfsf_a9788c6209c44165cfbb67a6460a84e3c}
+
+\item 
+\hypertarget{namespacetfsf_a50fdca1dbdb94c680e435765135a7ec6}{}real(\hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp}), dimension(-\/10\+:sizex-\/1) {\bfseries einc1}\label{namespacetfsf_a50fdca1dbdb94c680e435765135a7ec6}
+
+\item 
+\hypertarget{namespacetfsf_ac5a289f90633b1edd9b696f385659256}{}real(\hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp}), dimension(-\/10\+:sizex-\/1) {\bfseries hinc0}\label{namespacetfsf_ac5a289f90633b1edd9b696f385659256}
+
+\item 
+\hypertarget{namespacetfsf_aa5aa7fb7e5d93697584ee077a4e6d0a3}{}real(\hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp}), dimension(-\/10\+:sizex-\/1,-\/10\+:sizey-\/1) {\bfseries ezinc}\label{namespacetfsf_aa5aa7fb7e5d93697584ee077a4e6d0a3}
+
+\item 
+\hypertarget{namespacetfsf_a27c057dfe3b664bff7461d2473d04f9a}{}real(\hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp}), dimension(-\/10\+:sizex-\/1,-\/10\+:sizey-\/1) {\bfseries hxinc}\label{namespacetfsf_a27c057dfe3b664bff7461d2473d04f9a}
+
+\item 
+\hypertarget{namespacetfsf_adadc5684e0c3fd28a0924a67d908675f}{}real(\hyperlink{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{dp}), dimension(-\/10\+:sizex-\/1,-\/10\+:sizey-\/1) {\bfseries hyinc}\label{namespacetfsf_adadc5684e0c3fd28a0924a67d908675f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Total Field/\+Scattered Field Implementation. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacetfsf_aa2ef130db3d1a7206055623c28c5a2e3}{}\index{tfsf@{tfsf}!tfsf\+\_\+inc@{tfsf\+\_\+inc}}
+\index{tfsf\+\_\+inc@{tfsf\+\_\+inc}!tfsf@{tfsf}}
+\subsubsection[{tfsf\+\_\+inc}]{\setlength{\rightskip}{0pt plus 5cm}subroutine tfsf\+::tfsf\+\_\+inc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacetfsf_aa2ef130db3d1a7206055623c28c5a2e3}
+
+
+1\+D T\+F/\+S\+F Update Loops 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Einc0} & \\
+\hline
+{\em Einc1} & \\
+\hline
+{\em Hinc0} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacetfsf_a03610cc04c70776bc1f6292523af664c}{}\index{tfsf@{tfsf}!tfsf\+\_\+updateeinc@{tfsf\+\_\+updateeinc}}
+\index{tfsf\+\_\+updateeinc@{tfsf\+\_\+updateeinc}!tfsf@{tfsf}}
+\subsubsection[{tfsf\+\_\+updateeinc}]{\setlength{\rightskip}{0pt plus 5cm}subroutine tfsf\+::tfsf\+\_\+updateeinc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacetfsf_a03610cc04c70776bc1f6292523af664c}
+
+
+Update Ez\+Inc from Einc0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ez\+Inc} & \\
+\hline
+{\em Einc0} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacetfsf_a96006e1e78b93b364ccfafa419921489}{}\index{tfsf@{tfsf}!tfsf\+\_\+updatehinc@{tfsf\+\_\+updatehinc}}
+\index{tfsf\+\_\+updatehinc@{tfsf\+\_\+updatehinc}!tfsf@{tfsf}}
+\subsubsection[{tfsf\+\_\+updatehinc}]{\setlength{\rightskip}{0pt plus 5cm}subroutine tfsf\+::tfsf\+\_\+updatehinc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacetfsf_a96006e1e78b93b364ccfafa419921489}
+
+
+Get Hx\+Inc and Hy\+Inc from Hinc0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hx\+Inc} & \\
+\hline
+{\em Hy\+Inc} & \\
+\hline
+{\em Hinc0} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}{}\index{tfsf@{tfsf}!dp@{dp}}
+\index{dp@{dp}!tfsf@{tfsf}}
+\subsubsection[{dp}]{\setlength{\rightskip}{0pt plus 5cm}integer, parameter, private tfsf\+::dp = K\+I\+N\+D(1.d0)}\label{namespacetfsf_add0ca7d8e64b873d4cded22defee1fdb}
+
+
+Incidenet Fields. 
+
+The Einc0, Einc1, and Hinc0 fields are the fields on the incident grid. ~\newline
+ ~\newline
+ The Ez\+Inc, Hx\+Inc, and Hy\+Inc fields are used to update the actual F\+D\+T\+D fields. 
